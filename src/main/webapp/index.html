@@ -15,15 +15,20 @@
 
     <div id="popup" class="popup">
         <h3>New Room</h3>
-        <label>Chat name: <input name="name" type="text" id="chatName"></label>
+        <label>Chat name: <input id="chatName" name="name" type="text"></label>
         <label>Max members: <input name="maxMembers" min="0" max="20" step="1" value="1" size="12" id="maxMembers"></label>
         <button type="submit" onclick="doGet(); window.open('chatroom.html')" class="submitButton">Create Room</button>
         <button type="submit" onclick="closePopup()" class="closeButton">Close Window</button>
     </div>
 
-    <div id="chatRooms">
-
-
+    <div id="chatRooms" class="chatRooms">
+        <div class="chatroom">
+            <button>Join room</button>
+            <label>default room</label>
+            <label name="currentMembers">0</label>
+            <label>/</label>
+            <label name="maxMembers">10</label>
+        </div>
     </div>
     <div id="newRooms">
         <button type="submit" class="btn" onclick="openPopup()">+</button>

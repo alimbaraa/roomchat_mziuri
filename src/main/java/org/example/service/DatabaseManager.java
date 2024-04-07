@@ -40,6 +40,7 @@ public class DatabaseManager {
         entityManager.persist(chat);
 
         entityManager.getTransaction().commit();
+
         entityManager.close();
         factory.close();
     }

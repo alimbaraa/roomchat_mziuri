@@ -12,10 +12,10 @@ import lombok.*;
 @Entity
 @Table(name = "chat")
 public class Chat {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private final Integer id;
-    @Id
     @Column(name = "name")
     private String name;
     @Column(name = "maxMembers")

@@ -24,15 +24,10 @@ public class RoomServlet extends HttpServlet {
 
             System.out.println(name + " " + maxMembers);
 
-            if(databaseManager.alreadyExists(name)){
-                resp.getWriter().write(200);
-                resp.getWriter().write("an account with current name already exist");
-            } else {
-                databaseManager.addRoom(name, maxMembers);
-                resp.setStatus(200);
-            }
+            databaseManager.addRoom(name, maxMembers);
+            resp.setStatus(200);
         } catch (Exception e){
-            resp.setStatus(400);
+            resp.setStatus(403);
         }
     }
 
@@ -65,7 +60,7 @@ public class RoomServlet extends HttpServlet {
             String name = req.getParameter("name");
             String newName = req.getParameter("newName");
 
-            //databaseManager.changeName(name, newName);
+            databaseManager.changeName(name, newName);
             resp.getWriter().write("old name:" + name + "   -->   new name:" + newName);
             resp.setStatus(200);
         } catch (Exception e) {
