@@ -14,34 +14,27 @@
 
                 <div class="col-md-6 offset-3">
                     <div class="card">
-                        <div class="card-header" style="background-color: #3c5077;">chatroom</div>
+                        <div id="card-header" class="card-header" style="background-color: #3c5077;">
+                            <label id="header-name">chatroom</label>
+                        </div>
                         <div class="card-body height3">
                             <ul class="cath-list">
+
                                 <li class="in">
-                                    <div class="chat-img">
-                                    <img src="" alt="">
                                     <div class="chat-body">
                                         <div class="chat-message">
-                                            <h5>Name</h5>
-                                            <p>message context </p>
+                                            <h5>System</h5>
+                                            <p>welcome to the server</p>
                                         </div>
                                     </div>
-                                </div>
                                 </li>
 
-                                <li class="out">
-                                    <div class="chat-img">
-                                    <img src="" alt="">
-                                    <div class="chat-body">
-                                        <div class="chat-message">
-                                            <h5>Name2</h5>
-                                            <p>message context2</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                </li>
                                 
                             </ul>
+                        </div>
+                        <div class="card-bottom">
+                            <input type="text" name="message-field" id="message-field" placeholder="write your message" class="message-field">
+                            <button id="send-message"  class="send-message" > send </button>
                         </div>
                     </div>
                 </div>

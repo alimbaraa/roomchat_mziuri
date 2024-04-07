@@ -24,16 +24,11 @@ async function doGet(){
 
     console.log("response: " + response);
 
+    createChatroomDiv();
 
-    var div = document.getElementById("chatRooms");
+    var chatroomHeader = document.getElementById("header-name").value;
+    chatroomHeader.value = roomName;
 
-    div.innerHTML += '<div class="chatroom">';
-    div.innerHTML += '<button>Join room</button>';
-    div.innerHTML += '<label>' + roomName + '</label>';
-    div.innerHTML += '<label name="currentMembers">1</label>';
-    div.innerHTML += '<label>/</label>';
-    div.innerHTML += '<label name="maxMembers">' + maxMembers + '</label>';
-    div.innerHTML += '</div>';
 
     roomName.value = "";
 }
@@ -52,6 +47,24 @@ async function doDelete(){
 
 //functions for html
 function createChatroomDiv(){
+    var roomName = document.getElementById("chatName").value;
+    var maxMembers = document.getElementById("maxMembers").value;
+
+    var div = document.getElementById("chatRooms");
+
+    div.innerHTML += '<div class="chatroom">';
+    div.innerHTML += '<button>Join room</button>';
+    div.innerHTML += '<label>' + roomName + '</label>';
+    div.innerHTML += '<label name="currentMembers">1</label>';
+    div.innerHTML += '<label>/</label>';
+    div.innerHTML += '<label name="maxMembers">' + maxMembers + '</label>';
+    div.innerHTML += '</div>';
+}
+
+function setUpRoomChat(){
+    var roomName = document.getElementById("chatName").value;
+    var maxMembers = document.getElementById("maxMembers").value;
+
 }
 
 function openPopup(){

@@ -47,6 +47,29 @@ body{
     position: relative;
 }
 
+.card-bottom{
+    display: flex;
+
+}
+
+.send-message{
+    width: 15%;
+    height: 40px;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    background: #6f19a1;
+}
+
+.message-field{
+    background: #b1b1b1;
+    width: 85%;
+    height: 40px;
+}
+
 .card .card-header:first-child{
     -webkit-border-readius: 0.3rem 0.3rem 0 0;
     -moz-border-radius: 0.3rem 0.3rem 0 0;
